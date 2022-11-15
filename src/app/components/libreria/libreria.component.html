@@ -1,0 +1,33 @@
+<h1>Libreria de Comics</h1>
+<hr/>
+
+    <label>Titulo:</label>
+    <input type="text"><br/>
+    
+   
+
+    <label>Imagen:</label>
+    <input type="text"><br/>
+
+
+
+    <label>descripcion:</label>
+    <input type="text"><br/>
+
+    <button  style="BackgroundColor:green ;">Insertar Comic</button>
+
+
+    <div>
+        <div *ngFor="let comic of comics">
+            <app-comic [comic] ="comic" (metodoConsolelog) = "metodoPadre($event)"
+           (metodoFavorito)="metodoFavoritosPadre($event)" ></app-comic>
+        </div>
+
+       
+
+    </div>
+
+   
+
+
+
